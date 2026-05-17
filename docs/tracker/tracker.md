@@ -13,6 +13,7 @@ Approximate structure:
 
 abstract class Point  
 - Title (required)  
+- type [ATASK]
 - Tags (combine categories and tags for filtering, with possible extensions - color, etc.)  
 - Priority (low, medium, high, highest)  
 - Creation time  
@@ -24,6 +25,9 @@ abstract class Point
 abstract class BaseTaskPoint extends Point  
 - Description (displayed only in details)  
 
+class Task extends BaseTaskPoint (can have child Tasks, can be separate or in Goal; child status does not affect Task status)  
+- Tags (keystone, milestone)
+
 class Goal extends BaseTaskPoint (can have Task/Habit as children, can be linked to other Goals many-to-many; child status does not affect Goal status)  
 - Tags (LifeGoal/Infinity, milestone)  
 
@@ -33,20 +37,13 @@ class Habit extends Point (repeating task, no children, no description; each com
 - Streak count  
 - Completion dates (list of completion dates)  
 
-class DailyTask extends Task - task for every day like:
-- im a fell that Slept well
-- Went to bed before 11  
-- and other user-defined
+class DailyTask extends Task - task for every day like: im a fell that Slept well, Went to bed before 11  , and other user-defined. This entity can me completed as and Task
 
 Class Events extends Point - events during the day.  
 - work morning 8-12
 - lanch break
 - work day 13-17
 - dating with a girl 19:00
-
-
-class Task extends BaseTaskPoint (can have child Tasks, can be separate or in Goal; child status does not affect Task status)  
-- Tags (keystone, milestone)
 
 Chose of type - GTask as button group
 
