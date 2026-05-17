@@ -52,8 +52,8 @@ Chose of type - GTask as button group
 
 ## UI
 2 columns
-LEFT: TASKS & EVENTS
-RIGHT: HABBITS
+LEFT: 1 column - Tasks includes tasks, daily tasks and events
+RIGHT: 1 column - HABBITS
 
 Goal - acts as a parent entity, if it is in ATASK. Goal has no in columns. On create ATASK user can chose a goal, for link.
 
