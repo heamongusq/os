@@ -3,7 +3,8 @@
 ## Structure
 - src - folder for source code, all code and related files must be only in it
 - src/frontend - folder for the frontend of the project
-- src/bckend - folder for the backend of the project
+- src/backend - folder for the backend of the project
+- src/share - for share equal types
 
 ## Technologies
 ### Frontend

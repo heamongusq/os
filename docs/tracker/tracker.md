@@ -3,7 +3,9 @@ The task subsystem should have several entities:
 - Task
 - Event
 - Habit
-(GTEH)
+- Daily Task
+ATask - short name with out goal
+GTASK - short name with Goal
 
 It is necessary to implement CRUD for all these entities.
 
@@ -31,33 +33,33 @@ class Habit extends Point (repeating task, no children, no description; each com
 - Streak count  
 - Completion dates (list of completion dates)  
 
-Class Events extends Point - events during the day.  
-- Slept well, yes/no  
+class DailyTask extends Task - task for every day like:
+- im a fell that Slept well
 - Went to bed before 11  
-- and other user-defined events  
+- and other user-defined
+
+Class Events extends Point - events during the day.  
+- work morning 8-12
+- lanch break
+- work day 13-17
+- dating with a girl 19:00
+
 
 class Task extends BaseTaskPoint (can have child Tasks, can be separate or in Goal; child status does not affect Task status)  
 - Tags (keystone, milestone)
 
-В MVP фокус только на Goal, Habit и Task без подзадач кроме Task->Task, повторяющихся задач кроме Habit, проектов/эпиков, уведомлений. Прогресс Goal не рассчитываем.
-
-Сделай вбыор вида задачи  Taskm goal и тд в виде button group
+Chose of type - GTask as button group
 
 ## UI
-каждая сущность GTEH кроме Goal отображается в отдельном столбце
-Goal - выступает в роль родительской сущности, если она есть у TEH. У goal нет своего столбца. При создании teh можно выбирать goal, к которому он будет привязан. Если goal не выбран, teh будет отображаться в столбце без привязки к цели.
+2 columns
+LEFT: TASKS & EVENTS
+RIGHT: HABBITS
 
-reference отображения сущносте в task reference.png
-при наведении также отображаются карандаш и корзина для редактировани и удаления соответственно
-при нажатии на наименование есть возможность изменить название TEH
-редактирование Получение и редактирование списка goal доступно при нажатии на кнопку в верху экрана, рядом с кнопкой "добавить"
+Goal - acts as a parent entity, if it is in ATASK. Goal has no in columns. On create ATASK user can chose a goal, for link.
 
-например для task
-Goal - Семья
-  - познакомиться с новой девушкой Тэг Семья. иконка с отображением важности 
-  - Пригласить на свидание Тэг Семья. иконка с отображением важности 
+ui reference ATASK entity in "task reference.png"
 
-На странице должны уместиться столбцы;
-- Habbit
-- Task
-- Event
+Hovering over a goal also displays a pencil and trash bin for editing and deleting, respectively.
+Clicking on a name allows you to change the ATASK name.
+Editing: Receiving and editing the goal list is available by clicking the button at the top of the screen, next to the "Add" button.
+
