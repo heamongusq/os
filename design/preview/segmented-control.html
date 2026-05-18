@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Segmented control · type chooser</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grp { display: flex; flex-direction: column; gap: 10px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-3); }
+  .seg {
+    display: inline-flex;
+    border: 1px solid var(--border-2);
+    border-radius: var(--radius-2);
+    padding: 3px;
+    background: var(--bg-2);
+    gap: 2px;
+  }
+  .seg button {
+    padding: 6px 14px;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+    color: var(--fg-2);
+    border-radius: 2px;
+    text-transform: uppercase;
+    display: inline-flex; align-items: center; gap: 6px;
+  }
+  .seg button svg { width: 12px; height: 12px; stroke-width: 1.5; }
+  .seg button.active {
+    background: var(--bg-1);
+    color: var(--fg-1);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.06);
+  }
+  .seg button:hover:not(.active) { color: var(--fg-1); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grp">
+    <span class="lbl">Type chooser · new entity composer</span>
+    <div class="seg">
+      <button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        Goal
+      </button>
+      <button class="active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        Task
+      </button>
+      <button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="18" r="3"/><path d="M12 3v9M5.4 10.4l1.4 1.4M17.2 10.4l1.4 1.4M2 18h2M20 18h2"/></svg>
+        Daily
+      </button>
+      <button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Event
+      </button>
+      <button>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 014-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 01-4 4H3"/></svg>
+        Habit
+      </button>
+    </div>
+  </div>
+
+  <div class="grp" style="margin-top: 8px">
+    <span class="lbl">Task designation (auto, derived from goal link)</span>
+    <div class="row" style="gap: 8px; align-items: center; font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); letter-spacing: 0.06em; text-transform: uppercase;">
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--border-1); border-radius: 999px;">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        Task
+      </span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--fg-3);">no goal linked</span>
+      <span style="margin: 0 6px; color: var(--fg-4);">·</span>
+      <span style="display: inline-flex; align-items: center; gap: 6px; padding: 4px 10px; border: 1px solid var(--accent-ring); background: var(--accent-tint); color: var(--accent); border-radius: 999px;">
+        <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+        Goal
+      </span>
+      <span style="font-family: var(--font-serif); font-style: italic; font-size: 12px; text-transform: none; letter-spacing: 0; color: var(--fg-3);">linked to a goal</span>
+    </div>
+  </div>
+
+  <div class="grp" style="margin-top: 8px">
+    <span class="lbl">View switcher · today/all/calendar</span>
+    <div class="seg">
+      <button class="active">Today</button>
+      <button>All</button>
+      <button>Calendar</button>
+    </div>
+  </div>
+</div>
+</body>
+</html>

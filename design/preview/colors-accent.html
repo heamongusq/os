@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Accent · Violet</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .accent-row { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; }
+  .accent-row .cell {
+    aspect-ratio: 1.4 / 1;
+    border-radius: var(--radius-2);
+    border: 1px solid var(--border-1);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 6px;
+  }
+  .accent-row .cell .nm { font-family: var(--font-mono); font-size: 9px; color: var(--fg-2); }
+  .accent-row .cell .hx { font-family: var(--font-mono); font-size: 9px; color: var(--fg-3); }
+  .accent-row .cell.dark .nm,
+  .accent-row .cell.dark .hx { color: rgba(255,255,255,.85); }
+  .focal {
+    height: 64px;
+    border-radius: var(--radius-2);
+    background: var(--violet-500);
+    display: flex; align-items: center; gap: 12px; padding: 0 20px;
+    color: #fff;
+  }
+  .focal .ttl { font-family: var(--font-serif); font-style: italic; font-size: 18px; }
+  .focal .nm  { font-family: var(--font-mono); font-size: 11px; opacity: .8; margin-left: auto; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="focal">
+    <span class="ttl">Operate your day.</span>
+    <span class="nm">— violet-500 / #7C5CFF</span>
+  </div>
+  <div class="accent-row">
+    <div class="cell" style="background: var(--violet-50)"><span class="nm">50</span><span class="hx">F4F0FF</span></div>
+    <div class="cell" style="background: var(--violet-100)"><span class="nm">100</span><span class="hx">E7DFFF</span></div>
+    <div class="cell" style="background: var(--violet-200)"><span class="nm">200</span><span class="hx">CFBFFF</span></div>
+    <div class="cell" style="background: var(--violet-300)"><span class="nm">300</span><span class="hx">B19BFF</span></div>
+    <div class="cell dark" style="background: var(--violet-400)"><span class="nm">400</span><span class="hx">957BFF</span></div>
+    <div class="cell dark" style="background: var(--violet-500); outline: 2px solid var(--fg-1); outline-offset: 2px"><span class="nm">500</span><span class="hx">7C5CFF</span></div>
+    <div class="cell dark" style="background: var(--violet-600)"><span class="nm">600</span><span class="hx">6442EF</span></div>
+    <div class="cell dark" style="background: var(--violet-700)"><span class="nm">700</span><span class="hx">4F31C8</span></div>
+    <div class="cell dark" style="background: var(--violet-800)"><span class="nm">800</span><span class="hx">3D2599</span></div>
+    <div class="cell dark" style="background: var(--violet-900)"><span class="nm">900</span><span class="hx">2A1A6B</span></div>
+  </div>
+</div>
+</body>
+</html>

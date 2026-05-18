@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Inputs & forms</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 24px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field .lbl { font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-3); }
+  .field .hint { font-family: var(--font-serif); font-style: italic; font-size: 12px; color: var(--fg-3); }
+  .input,
+  .textarea {
+    width: 100%;
+    background: var(--bg-1);
+    border: 1px solid var(--border-2);
+    border-radius: var(--radius-2);
+    padding: 8px 12px;
+    height: 36px;
+    font-family: var(--font-serif);
+    font-size: 15px;
+    color: var(--fg-1);
+    transition: border-color var(--dur-2), box-shadow var(--dur-2);
+  }
+  .textarea { height: auto; min-height: 64px; padding: 10px 12px; line-height: 1.45; resize: vertical; }
+  .input:focus, .textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-ring); }
+  .input.invalid { border-color: var(--danger); }
+  .input.invalid + .hint { color: var(--danger); }
+  .input::placeholder, .textarea::placeholder { color: var(--fg-4); font-style: italic; }
+  .input--big {
+    height: 44px;
+    font-family: var(--font-serif); font-size: 17px;
+    border-color: var(--border-1);
+    background: transparent;
+  }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="field">
+      <span class="lbl">Title · big composer</span>
+      <input class="input input--big" type="text" placeholder="What needs to happen?"/>
+    </div>
+    <div class="field">
+      <span class="lbl">Default · focused</span>
+      <input class="input" type="text" value="Read for 30 min" style="border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-ring);"/>
+    </div>
+
+    <div class="field">
+      <span class="lbl">With placeholder</span>
+      <input class="input" type="text" placeholder="Add a description"/>
+    </div>
+    <div class="field">
+      <span class="lbl">Invalid</span>
+      <input class="input invalid" type="text" value="Q3 plan"/>
+      <span class="hint">Title must include a verb.</span>
+    </div>
+
+    <div class="field" style="grid-column: 1 / span 2">
+      <span class="lbl">Description · textarea</span>
+      <textarea class="textarea" placeholder="Visible only in details."></textarea>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Spacing scale</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .scale { display: flex; flex-direction: column; gap: 8px; }
+  .row-s { display: grid; grid-template-columns: 80px 1fr 48px; gap: 12px; align-items: center; }
+  .row-s .nm { font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); }
+  .row-s .v  { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); text-align: right; }
+  .bar { height: 10px; background: var(--violet-500); border-radius: 2px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="scale">
+    <div class="row-s"><span class="nm">--s-1</span><div class="bar" style="width:4px"></div><span class="v">4 px</span></div>
+    <div class="row-s"><span class="nm">--s-2</span><div class="bar" style="width:8px"></div><span class="v">8 px</span></div>
+    <div class="row-s"><span class="nm">--s-3</span><div class="bar" style="width:12px"></div><span class="v">12 px</span></div>
+    <div class="row-s"><span class="nm">--s-4</span><div class="bar" style="width:16px"></div><span class="v">16 px</span></div>
+    <div class="row-s"><span class="nm">--s-5</span><div class="bar" style="width:20px"></div><span class="v">20 px</span></div>
+    <div class="row-s"><span class="nm">--s-6</span><div class="bar" style="width:24px"></div><span class="v">24 px</span></div>
+    <div class="row-s"><span class="nm">--s-7</span><div class="bar" style="width:32px"></div><span class="v">32 px</span></div>
+    <div class="row-s"><span class="nm">--s-8</span><div class="bar" style="width:40px"></div><span class="v">40 px</span></div>
+    <div class="row-s"><span class="nm">--s-9</span><div class="bar" style="width:48px"></div><span class="v">48 px</span></div>
+    <div class="row-s"><span class="nm">--s-10</span><div class="bar" style="width:64px"></div><span class="v">64 px</span></div>
+    <div class="row-s"><span class="nm">--s-11</span><div class="bar" style="width:80px"></div><span class="v">80 px</span></div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Ink — neutral scale</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .row-scale { display: grid; grid-template-columns: repeat(10, 1fr); gap: 6px; }
+  .row-scale .cell {
+    aspect-ratio: 1.4 / 1;
+    border-radius: var(--radius-2);
+    border: 1px solid var(--border-1);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 6px;
+  }
+  .row-scale .nm { font-family: var(--font-mono); font-size: 9px; color: var(--fg-2); }
+  .row-scale .hx { font-family: var(--font-mono); font-size: 9px; color: var(--fg-3); }
+  .row-scale .dark .nm, .row-scale .dark .hx { color: rgba(255,255,255,.85); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row between">
+    <span class="label">Ink · neutral ramp</span>
+    <span class="label" style="color: var(--fg-2)">warm, never pure black/white</span>
+  </div>
+  <div class="row-scale">
+    <div class="cell" style="background: var(--ink-0)"><span class="nm">0</span><span class="hx">FFFFFF</span></div>
+    <div class="cell" style="background: var(--ink-1)"><span class="nm">1</span><span class="hx">FAFAF7</span></div>
+    <div class="cell" style="background: var(--ink-2)"><span class="nm">2</span><span class="hx">F2F1EC</span></div>
+    <div class="cell" style="background: var(--ink-3)"><span class="nm">3</span><span class="hx">E6E4DC</span></div>
+    <div class="cell" style="background: var(--ink-4)"><span class="nm">4</span><span class="hx">CFCCC1</span></div>
+    <div class="cell dark" style="background: var(--ink-5)"><span class="nm">5</span><span class="hx">9B988E</span></div>
+    <div class="cell dark" style="background: var(--ink-6)"><span class="nm">6</span><span class="hx">6B6962</span></div>
+    <div class="cell dark" style="background: var(--ink-7)"><span class="nm">7</span><span class="hx">3A3934</span></div>
+    <div class="cell dark" style="background: var(--ink-8)"><span class="nm">8</span><span class="hx">1C1B18</span></div>
+    <div class="cell dark" style="background: var(--ink-9)"><span class="nm">9</span><span class="hx">0B0B09</span></div>
+  </div>
+</div>
+</body>
+</html>

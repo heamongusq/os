@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Semantic colors</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  .sem {
+    border: 1px solid var(--border-1);
+    border-radius: var(--radius-2);
+    padding: 14px;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .sem .head { display: flex; align-items: center; gap: 10px; }
+  .sem .dot { width: 12px; height: 12px; border-radius: 50%; }
+  .sem .name { font-family: var(--font-serif); font-size: 17px; }
+  .sem .hex { font-family: var(--font-mono); font-size: 11px; color: var(--fg-3); margin-left: auto; }
+  .sem .pill {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: var(--radius-pill);
+    font-family: var(--font-mono); font-size: 11px;
+    letter-spacing: 0.04em;
+    width: fit-content;
+  }
+  .sem .desc { font-size: 13px; color: var(--fg-2); line-height: 1.4; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="sem">
+      <div class="head">
+        <span class="dot" style="background: var(--success)"></span>
+        <span class="name">Jade</span>
+        <span class="hex">#2E9971</span>
+      </div>
+      <span class="pill" style="background: var(--success-tint); color: var(--success)">streak · alive</span>
+      <span class="desc">Completion. Streak still alive. Never used decoratively.</span>
+    </div>
+    <div class="sem">
+      <div class="head">
+        <span class="dot" style="background: var(--warning)"></span>
+        <span class="name">Amber</span>
+        <span class="hex">#C68A14</span>
+      </div>
+      <span class="pill" style="background: var(--warning-tint); color: var(--warning)">overdue · 3d</span>
+      <span class="desc">Overdue, attention. Earthy, not saturated.</span>
+    </div>
+    <div class="sem">
+      <div class="head">
+        <span class="dot" style="background: var(--danger)"></span>
+        <span class="name">Clay</span>
+        <span class="hex">#B0492E</span>
+      </div>
+      <span class="pill" style="background: var(--danger-tint); color: var(--danger)">delete · permanent</span>
+      <span class="desc">Destructive only. Confirmations, errors.</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

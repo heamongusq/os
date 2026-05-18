@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Tags, chips, status</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px 24px; }
+  .grp { display: flex; flex-direction: column; gap: 10px; }
+  .lbl { font-family: var(--font-mono); font-size: 10px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--fg-3); }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+
+  .chip {
+    display: inline-flex; align-items: center; gap: 5px;
+    padding: 2px 8px;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-mono); font-size: 10px; letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--fg-2);
+    border: 1px solid var(--border-1);
+    background: var(--bg-1);
+  }
+  .chip svg { width: 11px; height: 11px; stroke-width: 1.5; }
+  .chip--accent { color: var(--accent); border-color: var(--accent-ring); background: var(--accent-tint); }
+  .chip--keystone { color: var(--fg-1); border-color: var(--border-strong); }
+  .chip--milestone { color: var(--fg-1); border-color: var(--fg-1); }
+  .chip--life { color: var(--accent); border-color: var(--accent); background: transparent; font-style: italic; font-family: var(--font-serif); font-size: 11px; text-transform: none; letter-spacing: 0; padding: 1px 10px; }
+
+  /* Status badges */
+  .badge {
+    display: inline-flex; align-items: center; gap: 6px;
+    font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.04em;
+    color: var(--fg-2);
+  }
+  .badge i {
+    width: 6px; height: 6px; border-radius: 50%; background: currentColor;
+    flex-shrink: 0;
+  }
+  .badge--created  { color: var(--fg-3); }
+  .badge--progress { color: var(--accent); }
+  .badge--overdue  { color: var(--warning); }
+  .badge--cancel   { color: var(--fg-4); }
+  .badge--complete { color: var(--success); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="grp">
+      <span class="lbl">Tags · standard</span>
+      <div class="row">
+        <span class="chip">work</span>
+        <span class="chip">german</span>
+        <span class="chip">reading</span>
+        <span class="chip">health</span>
+        <span class="chip" style="color: var(--fg-3)">+3</span>
+      </div>
+    </div>
+    <div class="grp">
+      <span class="lbl">System tags</span>
+      <div class="row">
+        <span class="chip chip--keystone">keystone</span>
+        <span class="chip chip--milestone">milestone</span>
+        <span class="chip chip--life">LifeGoal · ∞</span>
+      </div>
+    </div>
+
+    <div class="grp">
+      <span class="lbl">Goal link · on row</span>
+      <div class="row">
+        <span class="chip chip--accent">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          Learn German
+        </span>
+        <span class="chip chip--accent">→ Move to Berlin</span>
+      </div>
+    </div>
+    <div class="grp">
+      <span class="lbl">Status</span>
+      <div class="row" style="row-gap: 6px">
+        <span class="badge badge--created"><i></i>Created</span>
+        <span class="badge badge--progress"><i></i>In Progress</span>
+        <span class="badge badge--overdue"><i></i>Overdue</span>
+        <span class="badge badge--cancel"><i></i>Canceled</span>
+        <span class="badge badge--complete"><i></i>Completed</span>
+      </div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

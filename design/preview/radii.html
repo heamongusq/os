@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Radii</title>
+<link rel="stylesheet" href="_card.css"/>
+<style>
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 18px; }
+  .item { display: flex; flex-direction: column; align-items: center; gap: 8px; }
+  .box { width: 72px; height: 72px; background: var(--violet-500); display: block; }
+  .nm  { font-family: var(--font-mono); font-size: 11px; color: var(--fg-2); }
+  .v   { font-family: var(--font-mono); font-size: 10px; color: var(--fg-3); }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="grid">
+    <div class="item"><div class="box" style="border-radius: 0"></div><span class="nm">--radius-0</span><span class="v">0 · chart</span></div>
+    <div class="item"><div class="box" style="border-radius: 2px"></div><span class="nm">--radius-1</span><span class="v">2 · chip</span></div>
+    <div class="item"><div class="box" style="border-radius: 4px"></div><span class="nm">--radius-2</span><span class="v">4 · DEFAULT</span></div>
+    <div class="item"><div class="box" style="border-radius: 8px"></div><span class="nm">--radius-3</span><span class="v">8 · dialog</span></div>
+    <div class="item"><div class="box" style="border-radius: 12px"></div><span class="nm">--radius-4</span><span class="v">12 · widget</span></div>
+    <div class="item"><div class="box" style="border-radius: 999px; width: 132px"></div><span class="nm">--radius-pill</span><span class="v">999 · pill</span></div>
+  </div>
+</div>
+</body>
+</html>
