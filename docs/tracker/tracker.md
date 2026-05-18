@@ -46,8 +46,8 @@ Chose of task type as button group when add new task
 
 ## UI
 Page with tasks. Includes tasks, routine tasks and events
-
 Goal - acts as a parent entity, On create user can chose a goal, for link.
-
 Clicking on a name allows you to change item title.
+
+Determinate by time task after 3 day expire will be moved to Backlog
 
