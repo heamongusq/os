@@ -7,8 +7,6 @@
 
 ## Technologies
 ### Frontend
-- Vue 3 LTS (composition API)
-- Vuetify
 - Typescript
 
 ### Backend

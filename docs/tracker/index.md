@@ -6,3 +6,7 @@ Each page should have a Sidebar with icons for navigating between tabs.
 In the settings, there should be a choice of Sidebar mode - with page titles or without.
 
 White theme for project
+
+## Files
+
+- (tracker.md) — the product spec (entities, two-column UI rules).

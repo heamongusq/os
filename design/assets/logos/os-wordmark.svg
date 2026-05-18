@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 64" width="220" height="64" fill="none">
-  
-  <text x="0" y="48" class="word">OS</text>
-  <circle cx="98" cy="46" r="4" class="dot"></circle>
-  <text x="108" y="48" class="word" style="font-style: normal; font-weight: 380; opacity: .55">operate</text>
-</svg>
