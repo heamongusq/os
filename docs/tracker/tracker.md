@@ -30,7 +30,8 @@ class Task extends BaseTask (can have child Tasks, can be separate or in Goal; c
 class Goal extends BaseTaskPoint (can have Task as children, can be linked to other Goals many-to-many; child status does not affect Goal status)  
 - color - for paint in ui
 
-class RoutineTask extends BaseTask - a recurring routine task like: im a fell that Slept well, Went to bed before 11, and other user-defined. This entity can be completed as a Task
+class RoutineTask extends BaseTask
+a recurring routine task like: im a fell that Slept well, Went to bed before 11, and other user-defined. This entity can be completed as a Task
 description; each completion = Point completion for analytics; list of completion dates for recent time/since last streak for display  
 - Frequency (day, week, month, specific weekdays)  
 - Streak count  

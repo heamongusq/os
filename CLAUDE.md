@@ -1,17 +1,22 @@
-# Project for a Life Management and Tracking
+# Project
+SMS — life tracking app.
+
+## Stack
+Web (React + Express) + RN mobile widget. SQLite now, Postgres later.
 
 ## Structure
-- docs - project documentation
-- src - source code, all code and related files must be only in it
-- design - design and ui kit
+/docs — project documentation
+/src — all source code lives here
+  api/      Express + SQLite
+  web/      React
+  mobile/   React Native + widget
+  shared/   types, utils
+  design/ — design and UI kit
 
-## Technologies
-### Frontend
-- Typescript
+## Entities
+routineTask, task, event, goal — CRUD.
 
-### Backend
-- node.js
-- Typescript
-- SQLite
-
-Each subdirectory has an index file describing the contents of that subdirectory.
+## Rules
+TypeScript
+Keep DB layer portable to Postgres
+No auth yet (single-user MVP)
