@@ -2,7 +2,6 @@ The task subsystem should have several entities:
 - Goal
 - Task
 - Event
-- Routine Task
 
 It is necessary to implement CRUD for all these entities.
 
@@ -18,24 +17,21 @@ abstract class Point
 - Status (Created, In Progress, Overdue, Canceled, Completed)  
 - Relations: parent (link to parent), children (list of child Points)  
 
-abstract class BaseTaskPoint extends Point  
-- Description (displayed only in details)
-
 abstract class BaseTask extends BaseTaskPoint
 - goals - array of Goal tasks
+- Description (displayed only in details)
+
 
 class Task extends BaseTask (can have child Tasks, can be separate or in Goal; child status does not affect Task status)  
 - tasks - simple tasks like checklist
+- Frequency (day, week, month, specific days = [mon, sut] as example)
+- Streak count
 
-class Goal extends BaseTaskPoint (can have Task as children, can be linked to other Goals many-to-many; child status does not affect Goal status)  
+if Task has frequence she taged by "routine"
+default routine task: Slept well
+
+class Goal extends BaseTask (can have Task as children, can be linked to other Goals many-to-many; child status does not affect Goal status)
 - color - for paint in ui
-
-class RoutineTask extends BaseTask
-a recurring routine task like: im a fell that Slept well, Went to bed before 11, and other user-defined. This entity can be completed as a Task
-description; each completion = Point completion for analytics; list of completion dates for recent time/since last streak for display  
-- Frequency (day, week, month, specific weekdays)  
-- Streak count  
-- Completion dates (list of completion dates)  
 
 Class Events extends BaseTask - events during the day.  
 - work morning 8-12
@@ -46,9 +42,8 @@ Class Events extends BaseTask - events during the day.
 Chose of task type as button group when add new task
 
 ## UI
-Page with tasks. Includes tasks, routine tasks and events
+list of tasks and events by day
+like a google tasks
+Clicking on a name allows you to change item.
 Goal - acts as a parent entity, On create user can chose a goal, for link.
-Clicking on a name allows you to change item title.
-
-Determinate by time task after 3 day expire will be moved to Backlog
 
